@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="elances.css">
+    <title>Tu perfil - Equipo 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedor {
+            background-color: white;
+            width: 80%;
+            max-width: 1000px;
+            display: flex;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .izquierda {
+            flex: 1;
+            background-color: #e9f2ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .izquierda img {
+            width: 80%;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 3px solid #1e90ff;
+            margin-bottom: 10px;
+        }
+
+        .izquierda input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .derecha {
+            flex: 1.5;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1e90ff;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #006edc;
+        }
+
+        .contador {
+            text-align: right;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="izquierda">
+            <img id="imagenPerfil" src="https://via.placeholder.com/300x300?text=Tu+Foto" alt="Foto de perfil">
+            <input type="file" id="subirImagen" accept="image/*">
+        </div>
+
+        <div class="derecha">
+            <div class="campo">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" readonly>
+            </div>
+
+            <div class="campo">
+                <label>Contraseña:</label>
+                <input type="password" id="contrasena" readonly>
+            </div>
+
+            <div class="campo">
+                <label>Correo electrónico:</label>
+                <input type="text" id="correo" placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="campo">
+                <label>Descripción (máx. 150 caracteres):</label>
+                <textarea id="descripcion" maxlength="150" placeholder="Cuéntanos algo sobre ti..."></textarea>
+                <div class="contador" id="contador">0 / 150</div>
+            </div>
+
+            <div class="botones">
+                <button onclick="location.href='recursos2.html'">Proyectos del profe</button>
+                <button onclick="guardarYVolver()">Guardar información y regresar a la biblioteca</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Recuperar los datos del login
+        const nombreGuardado = localStorage.getItem("nombreUsuario");
+        const contrasenaGuardada = localStorage.getItem("contrasenaUsuario");
+
+        document.getElementById("nombre").value = nombreGuardado || "";
+        document.getElementById("contrasena").value = contrasenaGuardada || "";
+
+        // Control de caracteres en la descripción
+        const descripcion = document.getElementById("descripcion");
+        const contador = document.getElementById("contador");
+
+        descripcion.addEventListener("input", () => {
+            const longitud = descripcion.value.length;
+            contador.textContent = `${longitud} / 150`;
+        });
+
+        // Subir imagen de perfil
+        const subirImagen = document.getElementById("subirImagen");
+        const imagenPerfil = document.getElementById("imagenPerfil");
+
+        subirImagen.addEventListener("change", (e) => {
+            const archivo = e.target.files[0];
+            if (archivo) {
+                const lector = new FileReader();
+                lector.onload = function(event) {
+                    imagenPerfil.src = event.target.result;
+                    localStorage.setItem("imagenPerfil", event.target.result);
+                };
+                lector.readAsDataURL(archivo);
+            }
+        });
+
+        // Cargar imagen guardada
+        const imagenGuardada = localStorage.getItem("imagenPerfil");
+        if (imagenGuardada) {
+            imagenPerfil.src = imagenGuardada;
+        }
+
+        // Guardar información y volver a la biblioteca
+        function guardarYVolver() {
+            localStorage.setItem("correoUsuario", document.getElementById("correo").value);
+            localStorage.setItem("descripcionUsuario", document.getElementById("descripcion").value);
+            alert("Información guardada correctamente.");
+            location.href = "biblio.html";
+        }
+    </script>
+
+</body>
+</html>

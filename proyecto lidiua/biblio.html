@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="elances.css">
+    <title>Biblioteca - Equipo 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9ff;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px 0;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .top-buttons {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .top-buttons button {
+            background-color: white;
+            color: #1e90ff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .top-buttons button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .saludo {
+            background-color: white;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 1.3em;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin: 40px auto;
+            width: 80%;
+        }
+
+        h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .proyectos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cuadro {
+            background-color: white;
+            border-radius: 15px;
+            width: 200px;
+            height: 130px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .cuadro:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenidos</h1>
+        <div class="top-buttons">
+            <button onclick="location.href='recursos2.html'">Material de clase</button>
+            <button onclick="location.href='perfil.html'">Tu perfil</button>
+        </div>
+    </header>
+
+    <div class="saludo" id="saludo">
+        Hola, usuario
+    </div>
+
+    <section>
+        <h2>Tus proyectos</h2>
+        <div class="proyectos">
+            <div class="cuadro">Proyecto 1</div>
+            <div class="cuadro">Proyecto 2</div>
+            <div class="cuadro">Proyecto 3</div>
+            <div class="cuadro">Proyecto 4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Proyectos favoritos</h2>
+        <div class="proyectos">
+            <div class="cuadro">Favorito 1</div>
+            <div class="cuadro">Favorito 2</div>
+            <div class="cuadro">Favorito 3</div>
+            <div class="cuadro">Favorito 4</div>
+        </div>
+    </section>
+
+    <script>
+        // Recuperar el nombre guardado desde login.html
+        const nombreUsuario = localStorage.getItem("nombreUsuario");
+
+        // Mostrarlo en el saludo
+        const saludoDiv = document.getElementById("saludo");
+        if (nombreUsuario) {
+            saludoDiv.textContent = "Hola, " + nombreUsuario + " 👋";
+        } else {
+            saludoDiv.textContent = "Hola, visitante 👋";
+        }
+    </script>
+
+</body>
+</html>

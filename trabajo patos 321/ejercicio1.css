@@ -1,0 +1,35 @@
+body {
+    background-color: #f0f0f0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.tarjeta-oferta {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+.tarjeta-oferta::after {
+    content: "¡Oferta!";
+    position: absolute;
+    top: 18px;
+    right: -30px;    
+    background-color: #d9534f; /* Rojo */
+    color: white;
+    padding: 5px 30px;
+    
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

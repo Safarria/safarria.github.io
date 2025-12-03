@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    colr: #222; 
+    background: linear-gradient(#f7f7f7, #ffffff);
+}
+
+.encabezado {
+    padding: 60px auto; 
+    text-align: center;
+    background-color: #101935;
+    color: white;
+}
+
+.txt-destacado {
+    color: #ffdd57;
+    letter-spacing: 2px;
+}
+
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit minmax(240px 1fr)); 
+    gap: 20px;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.producto-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-card.destacado {
+    outline: 3px dashed #ffdd57;
+    display: flez; 
+    flex-direction: column;
+}
+
+.producto-card .precio {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.producto-card .descripcion {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    min-height: 48px;
+}
+
+.etiqueta-nueva {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 10px;
+    background-color: #ff8c42;
+    color: white;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.tabla {
+    width: 100%;
+    margin-top: 40px;
+    bordr-collapse: collapse; 
+    background-color: white;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.envio {
+    margin-top: 50px;
+    background-color: #eef2ff;
+    padding: 30px;
+    border-left: 5px solid #4c6ef5;
+}
+
+.lista-envio {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-wieght: bold; 
+}
+
+.boton-secundario {
+    background-color: #4c6ef5;
+    border: 2px solid transparent;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+
+.pie {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: #101935;
+    color: #f0f0f0;
+}
+
+.pie a {
+    color: #9ab3ff;
+    text-decoration: underline dotted;
+}

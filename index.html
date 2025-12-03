@@ -3,343 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Bertomeu Pérez</title>
+    <title>Currículum de Eduardo Bertomeu Pérez</title>
     <style>
-        /* Estilos para el body */
         body {
-            margin: 0; /* Elimina el margen por defecto del body */
-            font-family: Arial, sans-serif; /* Establece la fuente del documento */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f4;
         }
-
-        /* Estilos para el header */
+        div {
+            border-radius: 10px;
+        }
         header {
-            background-image: url('soldado-dibujos-animados-pato-lindo-fondo-pantalla-hd-sonriente_930284-39.avif'); /* Establece la imagen de fondo del header */
-            background-size: cover; /* Hace que la imagen de fondo cubra todo el header */
-            background-position: center; /* Centra la imagen de fondo */
-            height: 400px; /* Altura del header */
-            display: flex; /* Utiliza flexbox para centrar el contenido */
-            flex-direction: column; /* Coloca los elementos en columna */
-            justify-content: center; /* Centra verticalmente el contenido */
-            align-items: center; /* Centra horizontalmente el contenido */
-            color: white; /* Color del texto */
-            position: relative; /* Posiciona el header de forma relativa */
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
-
-        /* Estilos para el texto del banner */
-        .banner-text {
-            font-size: 36px; /* Tamaño de la fuente del texto */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto para mejorar la legibilidad */
+        header img.banner-photo {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
-
-        /* Estilos para la imagen del banner */
-        .banner-image {
-            width: 100px; /* Ancho de la imagen del banner */
-            margin-top: 20px; /* Espacio superior de la imagen */
-        }
-
-        /* Estilos para el menú de navegación */
         nav {
-            position: absolute; /* Posiciona el menú de forma absoluta dentro del header */
-            top: 20px; /* Espacio desde la parte superior */
-            left: 20px; /* Espacio desde la izquierda */
+            background: #222;
+            padding: 10px;
+            text-align: center;
         }
-
-        /* Estilos para los enlaces del menú */
         nav a {
-            color: white; /* Color de los enlaces */
-            text-decoration: none; /* Elimina el subrayado de los enlaces */
-            margin: 0 15px; /* Espacio horizontal entre los enlaces */
-            font-size: 18px; /* Tamaño de la fuente de los enlaces */
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
-
-        /* Estilos para el hover de los enlaces */
         nav a:hover {
-            text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+            text-decoration: underline;
         }
-
-        /* Estilos para el div de cookies */
-        .cookie-banner {
-            position: fixed; /* Posiciona el div de cookies de forma fija */
-            bottom: 20px; /* Espacio desde la parte inferior */
-            left: 20px; /* Espacio desde la izquierda */
-            background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
-            color: white; /* Color del texto */
-            padding: 15px; /* Espaciado interno */
-            border-radius: 5px; /* Bordes redondeados */
-            z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        /* Estilos para el botón de aceptar cookies */
-        .cookie-button {
-            background-color: #4CAF50; /* Color de fondo del botón */
-            color: white; /* Color del texto del botón */
-            border: none; /* Sin borde */
-            padding: 10px 15px; /* Espaciado interno del botón */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        .left-column, .right-column {
+            width: 48%;
         }
-
-        /* Estilos para el botón al pasar el ratón */
-        .cookie-button:hover {
-            background-color: #45a049; /* Color de fondo al pasar el ratón */
+        h1, h2, h3 {
+            color: #333;
         }
-
-        /* Estilos para el contenedor de preguntas */
-        .questions-container {
-            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
-            width: 80%; /* Ancho del contenedor */
-            max-width: 600px; /* Ancho máximo del contenedor */
-            border: 1px solid #ccc; /* Borde del contenedor */
-            border-radius: 10px; /* Bordes redondeados */
-            padding: 20px; /* Espaciado interno */
-            background-color: #f9f9f9; /* Color de fondo del contenedor */
+        .highlight {
+            color: blue;
+            font-weight: bold;
         }
-
-        /* Estilos para cada pregunta */
-        .question {
-            margin-bottom: 15px; /* Espacio inferior entre preguntas */
-            font-weight: bold; /* Negrita para las preguntas */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
-
-        /* Estilos para las respuestas */
-        .answer {
-            margin-left: 10px; /* Espacio a la izquierda de las respuestas */
-            font-size: 14px; /* Tamaño de la fuente de las respuestas */
-            color: #555; /* Color del texto de las respuestas */
+        .aptitudes {
+            text-align: center;
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        /* Estilos para la cuadrícula de proyectos */
-        .projects-container {
-            display: grid; /* Utiliza grid para la disposición de los proyectos */
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crea columnas responsivas */
-            gap: 20px; /* Espacio entre los proyectos */
-            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
-            width: 80%; /* Ancho del contenedor */
-            max-width: 1200px; /* Ancho máximo del contenedor */
+        .aptitudes img {
+            width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
         }
-
-        /* Estilos para cada proyecto */
-        .project {
-            border: 1px solid #ccc; /* Borde del proyecto */
-            border-radius: 10px; /* Bordes redondeados */
-            overflow: hidden; /* Oculta el desbordamiento */
-            background-color: #fff; /* Color de fondo del proyecto */
-            text-align: center; /* Centra el texto */
+        .pdf-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: blue;
+            text-decoration: underline;
         }
-
-        /* Estilos para la imagen del proyecto */
-        .project img {
-            width: 100%; /* Ancho completo de la imagen */
-            height: auto; /* Altura automática para mantener la proporción */
-        }
-
-        /* Estilos para el título del proyecto */
-        .project-title {
-            font-weight: bold; /* Negrita para el título */
-            margin: 10px 0; /* Margen superior e inferior */
-        }
-
-        /* Estilos para la descripción del proyecto */
-        .project-description {
-            font-size: 14px; /* Tamaño de la fuente de la descripción */
-            color: #555; /* Color del texto de la descripción */
-            padding: 0 10px; /* Espaciado horizontal */
-            margin-bottom: 10px; /* Margen inferior */
-        }
-
-        /* Estilos para la sección de habilidades */
-        .skills-section {
-            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
-            width: 80%; /* Ancho del contenedor */
-            max-width: 600px; /* Ancho máximo del contenedor */
-            padding: 20px; /* Espaciado interno */
-            background-color: #f0f0f0; /* Color de fondo de la sección */
-            border-radius: 10px; /* Bordes redondeados */
-            text-align: center; /* Centra el texto */
-        }
-
-        /* Estilos para la tabla de habilidades */
-        .skills-table {
-            width: 100%; /* Ancho completo de la tabla */
-            border-collapse: collapse; /* Colapsa los bordes de la tabla */
-            margin-top: 20px; /* Margen superior de la tabla */
-        }
-
-        /* Estilos para las celdas de la tabla */
-        .skills-table th, .skills-table td {
-            border: 1px solid #ccc; /* Borde de las celdas */
-            padding: 10px; /* Espaciado interno de las celdas */
-            text-align: center; /* Centra el texto en las celdas */
-        }
-
-        /* Estilos para los enlaces */
-        .links-section a {
-            display: inline-block; /* Muestra los enlaces en línea */
-            margin: 10px; /* Margen entre los enlaces */
-            text-decoration: none; /* Elimina el subrayado */
-            color: #007BFF; /* Color del texto de los enlaces */
-            font-size: 18px; /* Tamaño de la fuente de los enlaces */
-        }
-
-        /* Estilos para el hover de los enlaces */
-        .links-section a:hover {
-            text-decoration: underline; /* Subraya el enlace al pasar el ratón */
-        }
-
-        /* Estilos para el formulario de contacto */
-        .contact-form {
-            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
-            width: 80%; /* Ancho del cont enedor */
-            max-width: 600px; /* Ancho máximo del contenedor */
-            padding: 20px; /* Espaciado interno */
-            background-color: #f9f9f9; /* Color de fondo del formulario */
-            border-radius: 10px; /* Bordes redondeados */
-        }
-
-        /* Estilos para los campos del formulario */
-        .contact-form input, .contact-form textarea {
-            width: 100%; /* Ancho completo de los campos */
-            padding: 10px; /* Espaciado interno */
-            margin: 10px 0; /* Margen superior e inferior */
-            border: 1px solid #ccc; /* Borde del campo */
-            border-radius: 5px; /* Bordes redondeados */
-        }
-
-        /* Estilos para el botón de envío */
-        .contact-form button {
-            background-color: #4CAF50; /* Color de fondo del botón */
-            color: white; /* Color del texto del botón */
-            border: none; /* Sin borde */
-            padding: 10px 15px; /* Espaciado interno del botón */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-            margin-top: 10px; /* Margen superior del botón */
-        }
-
-        /* Estilos para el botón al pasar el ratón */
-        .contact-form button:hover {
-            background-color: #45a049; /* Color de fondo al pasar el ratón */
-        }
-
-        /* Estilos para el pie de página */
         footer {
-            text-align: center; /* Centra el texto del pie de página */
-            padding: 20px; /* Espaciado interno */
-            background-color: #f0f0f0; /* Color de fondo del pie de página */
-            position: relative; /* Posiciona el pie de página de forma relativa */
-            bottom: 0; /* Asegura que esté al final de la página */
-            width: 100%; /* Ancho completo del pie de página */
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
+        footer a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer a img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+        /* Sección de proyectos: cuadrícula responsive */
+.projects-section {
+max-width: 1100px;
+margin: 20px auto;
+padding: 20px;
+}
+.projects-section h2 {
+text-align: center;
+margin-bottom: 15px;
+}
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+.project-card {
+background: #fff;
+padding: 12px;
+border-radius: 10px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+display: flex;
+flex-direction: column;
+align-items: stretch;
+}
+.project-card a {
+color: inherit;
+text-decoration: none;
+display: block;
+}
+.project-thumb {
+width: 100%;
+height: 120px;
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+.project-title {
+font-weight: bold;
+margin: 6px 0 4px 0;
+}
+.project-desc {
+font-size: 0.95rem;
+color: #555;
+margin-bottom: 8px;
+}
+.project-link-text {
+margin-top: auto;
+font-size: 0.9rem;
+color: #0066cc;
+text-decoration: underline;
+}
+body {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left-column, .right-column {
+width: 48%;
+}
+h1, h2, h3 {
+color: #333;
+}
+.highlight {
+color: blue;
+font-weight: bold;
+}
+ul { list-style-type: disc; margin-left: 20px; }
+
+
+/* Formulario de contacto */
+.contact-form {
+background: #fff;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-form h2 { text-align: center; }
+.contact-form input, .contact-form textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.contact-form button {
+padding: 10px 20px;
+border: none;
+background: #007bff;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+.contact-form button:hover {
+background: #0056b3;
+transform: scale(1.05);
+}
+
+#proyectos .project-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+background: #222;
+color: white;
+text-align: center;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+footer a img {
+width: 100px;
+height: 100px;
+margin-bottom: 20px;
+}
+footer img {
+    width: 40px;
+    height: auto;
+}
+
+footer .footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
     </style>
 </head>
 <body>
 
-<header>
-    <div class="banner-text">Eduardo Bertomeu Pérez</div>
-    <img src="trabajo portafolio/un logo con una espada con empuñadura de leon y un caballo de Troya.png" alt="Banner" class="banner-image">
+    <header style="background-image: url('fondo.jfif');">
+        <h1>Eduardo Bertomeu Pérez</h1>
+        <img src="logo.png" alt="Imagen del banner" class="banner-photo">
+    </header>
+
     <nav>
-        <a href="#quien-soy">¿Quién soy?</a>
-        <a href="#que-he-estudiado">¿Qué he estudiado?</a>
-        <a href="#donde-he-trabajado">¿Dónde he trabajado?</a>
-        <a href="#descripcion">Pequeña descripción</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#habilidades">Habilidades</a>
+        <a href="#acerca">Acerca de mí</a>
         <a href="#contacto">Contacto</a>
+        <a href="#aficiones">Aficiones</a>
+        <a href="#educacion">Educación</a>
+        <a href="#experiencia">Experiencia laboral</a>
+        <a href="#judo">Judo</a>
+        <a href="#aptitudes">Aptitudes</a>
     </nav>
-</header>
 
-<div class="cookie-banner" id="cookie-banner">
-    Este sitio utiliza cookies. <button class="cookie-button" onclick="acceptCookies()">Aceptar</button>
+    <div class="container">
+        <div class="left-column">
+            <img src="foto.png" alt="Foto de Eduardo" class="image">
+            <p id="acerca" class="highlight">Acerca de mí:</p>
+            <p>Soy una persona muy imaginativa, leal, activa y resiliente...</p>
+            <p><strong>Cumpleaños:</strong> 24/02/2004, en Valencia</p>
+
+            <p id="contacto" class="highlight">Contacto:</p>
+            <ul>
+                <li><strong>Teléfono:</strong> 605 49 99 18</li>
+                <li><strong>Dirección:</strong> Calle Escritor Rafael Ferreres nº4, Pta. – 10</li>
+                <li><strong>Correo:</strong> <a href="mailto:edubertomeu@gmail.com">edubertomeu@gmail.com</a></li>
+            </ul>
+
+            <p id="aficiones" class="highlight">Aficiones:</p>
+            <ul>
+                <li>Deportes (Judo)</li>
+                <li>Senderismo</li>
+                <li>Tecnología</li>
+                <li>Acampadas</li>
+                <li>Cómics</li>
+                <li>Historia</li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <p id="educacion" class="highlight">EDUCACIÓN:</p>
+            <p><strong>Estudios de Grado Superior...</strong></p>
+
+            <p><strong>Experiencias informáticas:</strong></p>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>Canva</li>
+                <li>IA: Copilot, ChatGPT...</li>
+                <li>GitHub</li>
+                <li>Sistemas operativos</li>
+                <li>Ofimática</li>
+                <li>Redes</li>
+            </ul>
+
+            <p><strong>Premios ganados:</strong> Segundo premio V Edition Girls4STEM, organizado por la Universidad de Valencia para fomentar las vocaciones STEM</p>
+
+            <p><strong>graduado en SMR</strong>
+            2022-2024</p>
+
+            <p><strong>Estudios de Bachillerato:</strong><br>
+            2022</p>
+
+            <p><strong>Estudios de Infantil, Primaria, Secundaria y Bachillerato en el colegio Sagrado Corazón Hermanos Maristas de Valencia:</strong><br>
+            2007-2022</p>
+
+            <p><strong>Titulación de Monitor de Tiempo Libre:</strong><br>
+            Jun 2024<br>
+            Cursado en la universidad católica de Valencia-Godella en Jun 2020</p>
+
+            <p><strong>Titulación de manipulación de alimentos:</strong><br>
+            2024<br>
+            Cursado vía online para poder manipular y cocinar alimentos en lugares como campamentos</p>
+
+            <p><strong>Titulación de entorno seguro:</strong><br>
+            2024<br>
+            Cursado vía online para poder trabajar en campamentos scouts, de vida cristiana, entre otros.</p>
+
+            <p><strong>Valencià B1:</strong><br>
+            Cursado</p>
+
+            <p><strong>B1 de Inglés:</strong><br>
+            Cursado</p>
+
+            <p><strong>B2 de Inglés:</strong><br>
+            Cursando</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="highlight">EXPERIENCIA LABORAL:</p>
+
+        <p class="highlight">Grupo Scout Impeesa Maristas. Monitor de tiempo libre:</p>
+        <p>ago 2022 - actualidad<br>
+        Scout desde los cinco años. Desde 2020 soy scouter. Trabajo en un grupo scout con más de 200 niños y jóvenes con edades comprendidas entre 5 y 17 años. Junto al resto de jefes preparo la programación semanal para realizar actividades todos los sábados.</p>
+
+        <p class="highlight">Horno Alpera Patraix. Dependiente en panadería:</p>
+        <p>Despacho de pan en una panadería.</p>
+
+        <p class="highlight">DEPORTES:</p>
+
+        <p class="highlight">Judo:</p>
+        <p>2007-2022<br>
+        Federado en la comunidad valenciana, cinturón negro. Competí en varios lugares de la Comunidad Valenciana, España y Europa. Retirado voluntariamente en 2022.</p>
+    </div>
+
+    <div class="aptitudes">
+        <p class="highlight">APTITUDES:</p>
+        <img src="tabla.png" alt="Aptitudes" class="image">
+        <a href="curriculum.pdf" class="pdf-link">Llevar al PDF</a>
+    </div>
+    <!-- Sección de proyectos -->
+<section id="proyectos" class="projects-section">
+<h2>Proyectos</h2>
+<div class="projects-grid">
+<div class="project-card">
+<a href="trabajo patos 321/ejercicio1.html" title="Proyecto 1">
+<img src="Trajeta.png" alt="Proyecto 1" class="project-thumb">
+<div class="project-title">Proyecto 1</div>
+<div class="project-desc">una tarjeta, sin mas</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
 </div>
 
-<div class="questions-container">
-    <div id="quien-soy" class="question">¿Quién soy?
-        <div class="answer">Soy Eduardo.</div>
-    </div>
-    <div id="que-he-estudiado" class="question">¿Qué he estudiado?
-        <div class="answer">He estudiado en el colegio Hermanos Corazón Maristas y la FP en el colegio "Sorolla".</div>
-    </div>
-    <div id="donde-he-trabajado" class="question">¿Dónde he trabajado?
-        <div class="answer">He trabajado en la panadería de mi tío, ayudándole con las ventas.</div>
-    </div>
-    <div id="descripcion" class="question">Pequeña descripción:
-        <div class="answer">Soy un chaval de 20 años, estudiante de Sistemas Microinformáticos y Redes en una de las FP del colegio "Sorolla". Soy un chaval solidario, alegre, amante del deporte y el camping, tengo bastantes títulos...</div>
-    </div>
+
+<div class="project-card">
+<a href="trabajo patos 321/ejercicio2.html" title="Proyecto 2">
+<img src="depuradora.png" alt="Proyecto 2" class="project-thumb">
+<div class="project-title">Proyecto 2</div>
+<div class="project-desc">depuracion de errores en código</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
 </div>
 
-<div id="proyectos" class="projects-container">
-    <div class="project">
-        <a href="ed.html"><img src="imagen1.png" alt="Proyecto 1"></a>
-        <div class="project-title">la saga patuna</div>
-        <div class="project-description"> la trilogia de las peliculas mas patunas de la historia</div>
-    </div>
-    <div class="project">
-        <a href="PRUEBA 2.html"><img src="trabajo3/dancingunicorn.gif" alt="Proyecto 2"></a>
-        <div class="project-title">unicornio bailarin</div>
-        <div class="project-description">un unicornio bailarin durante eternamente</div>
-    </div>
-    <div class="project">
-        <a href="trabajoimgaen/felix.html"><img src="trabajoimgaen/el futuro es hoy.jpg" alt="Proyecto 3"></a>
-        <div class="project-title">tabla de fotetes</div>
-        <div class="project-description">una tabla de imagenes random hechas por una IA</div>
-    </div>
-    <div class="project">
-        <a href="tarea 343/tarea2.html"><img src="tarea 343/stop.gif" alt="Proyecto 4"></a>
-        <div class="project-title">tabla de reparos</div>
-        <div class="project-description">tabala de arreglos de tablas, listas y enlaces</div>
-    </div>
-    <div class="project">
-        <a href="trabajo3/trabajo.html"><img src="legendary steel_fighting type Pokemon based on the Trojan Horse.png" alt="Proyecto 5"></a>
-        <div class="project-title">tabla de bailarines</div>
-        <div class="project-description">Dtabla de unicornios bailarines que no se detienen</div>
-    </div>
-    <div class="project">
-        <a href="caprtea css/index.html"><img src="imagen2.png" alt="Proyecto 6"></a>
-        <div class="project-title">resumen patuno</div>
-        <div class="project-description">resumen de la saga de los patitos mas pesados y valientes del cine</div>
-    </div>
+
+<div class="project-card">
+<a href="trabajo patos 321/ejercicio3.html" title="Proyecto 3">
+<img src="ofertas1.png" alt="Proyecto 3" class="project-thumb">
+<div class="project-title">Proyecto 3</div>
+<div class="project-desc">la tienda de ropa mas espectacular</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
 </div>
 
-<div class="skills-section">
-    <h2>Habilidades</h2>
-    <p>He trabajado con distintos tipos de aparatos electrónicos, desde ordenadores a portátiles, e incluso Nintendos 2DS. Hablo español, inglés y valenciano, y puedo escribir en esos idiomas, así como en griego y latín. También me estoy sacando el B1 de inglés.</p>
+
+<div class="project-card">
+<a href="proyecto lidiua/index.html" title="Proyecto 4">
+<img src="erqu7.png" alt="Proyecto 4" class="project-thumb">
+<div class="project-title">Proyecto 4</div>
+<div class="project-desc">el gran proyecto del equipo 7</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
 </div>
 
-<table class="skills-table">
-    <tr>
-        <th>Habilidad</th>
-        <th>Porcentaje</th>
-    </tr>
-    <tr>
-        <td>HTML5</td>
-        <td>80%</td>
-    </tr>
-    <tr>
-        <td>CSS</td>
-        <td>90%</td>
-    </tr>
-</table>
 
-<div id="contacto" class="contact-form">
-    <h2>Contacto</h2>
-    <p>Si quieres contratarme, ¡llámame!</p>
-    <form>
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+<div class="project-card">
+<a href="examen-1evaluacion-B/index.html" title="Proyecto 5">
+<img src="ofertas2.png" alt="Proyecto 5" class="project-thumb">
+<div class="project-title">Proyecto 5</div>
+<div class="project-desc">sistemas de ofertas de navidad</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
 </div>
+
+
+<div class="project-card">
+<a href="saga patos.html" title="Proyecto 6">
+<img src="lidiafavoirtes.png" alt="Proyecto 6" class="project-thumb">
+<div class="project-title">Proyecto 6</div>
+<div class="project-desc">la saga mas patuna mas esperada</div>
+<div class="project-link-text">Ver proyecto</div>
+</a>
+</div>
+</div>
+</section>
+
+<section id="form-contacto" class="contact-form">
+<h2>¿Quieres contratarme? ¡Hablemos!</h2>
+<form>
+<label>Nombre:</label>
+<input type="text" name="nombre" required placeholder="Escribe tu nombre">
+
+
+<label>Correo electrónico:</label>
+<input type="email" name="email" required placeholder="ejemplo@correo.com">
+
+
+<label>Mensaje:</label>
+<textarea name="mensaje" rows="5" required placeholder="Escribe tu mensaje"></textarea>
+
+
+<button type="submit">Enviar</button>
+</form>
 
 <footer>
-    <p>©2024 Eduardo</p>
+<a href="#">
+<img src="face.png" alt="Facebook">
+</a>
+<a href="#">
+<img src="x.png" alt="Twitter">
+</a>
+<a href="#">
+<img src="ins.jfif" alt="Instagram">
+</a>
+<p>© 2025 Eduardo</p>
 </footer>
-
-<script>
-    function acceptCookies() {
-        document.getElementById('cookie-banner').style.display = 'none'; // Oculta el banner de cookies
-    }
-</script>
-
 </body>
 </html>

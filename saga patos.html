@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cartelera de Cine</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("fondo\ cinte.avif") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .cartelera {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .pelicula {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+
+  .pelicula:hover {
+    transform: scale(1.05);
+  }
+
+  .pelicula img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .pelicula:hover img {
+    transform: scale(1.15);
+  }
+
+  a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="cartelera">
+  <div class="pelicula">
+    <img src="cinta 1.png" alt="Película 1" />
+    <h3>Patos: una aventura apatosica</h3>
+    <p>el inicio de la saga</p>
+    <a href="#">Ver ahora</a>
+  </div>
+
+  <div class="pelicula">
+    <img src="cinta 2.png" alt="Película 2" />
+    <h3>Patos 2: el mundo polar</h3>
+    <p>nuestros protas decubren que el hielo no solo es frio</p>
+    <a href="#">Ver ahora</a>
+  </div>
+
+  <div class="pelicula">
+    <img src="cinta 3.png" alt="Película 3" />
+    <h3>Patos 3: el hackeo de Laguna</h3>
+    <p>La laguna nunca fue tan inseguda para los patos</p>
+    <a href="#">Ver ahora</a>
+  </div>
+
+  <div class="pelicula">
+    <img src="cinta 4.png" alt="Película 4" />
+    <h3>Patos 4: el regreso de Don Federico</h3>
+    <p>Federico ha regresado, pero como?</p>
+    <a href="#">Ver ahora</a>
+  </div>
+
+  <div class="pelicula">
+    <img src="cinta 5.png" alt="Película 5" />
+    <h3>Patos 5: Sir Misko y los quack-renta ladrones</h3>
+    <p>nuestros emplumados amigos tendran que viajar a Arabia a ayudar a un señor de la paz</p>
+    <a href="#">Ver ahora</a>
+  </div>
+
+  <div class="pelicula">
+    <img src="cinta 6.png" alt="Película 6" />
+    <h3>Patos 6: el Ojo del Quebrantahuesos</h3>
+    <p>una joya es robada, y el equipo tendra que aliarse con un antiguo criminal de guerra español</p>
+    <a href="#">Ver ahora</a>
+  </div>
+</div>
+
+</body>
+</html>

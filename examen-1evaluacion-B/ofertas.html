@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Escribe aquí el código de la página de ofertas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Empresa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+        }
+        header img {
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        footer img {
+            height: 40px;
+            margin: 0 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <!-- Logo elegido por el usuario -->
+        <img src="imagenes/awazon.png" alt="Logo de la empresa">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido principal -->
+        <h1>Ofertas</h1>
+
+        <table class="ofertas">
+            <tr>
+                <td>
+                    <img src="imagenes/productos/p1.webp" width="120">
+                    <p>Producto 1 (Tablet)</p>
+                    <p>Precio: 199€</p>
+                    <p>Disponible</p>
+                    <p><a href="#">Ver producto</a></p>
+                </td>
+                <td>
+                    <img src="imagenes/productos/p2.webp" width="120">
+                    <p>Producto 2 (Tablet)</p>
+                    <p>Precio: 249€</p>
+                    <p>No disponible</p>
+                    <p><a href="#">Ver producto</a></p>
+                </td>
+                <td>
+                    <img src="imagenes/productos/p3.webp" width="120">
+                    <p>Producto 3 (Portátil)</p>
+                    <p>Precio: 699€</p>
+                    <p>Disponible</p>
+                    <p><a href="#">Ver producto</a></p>
+                </td>
+                <td>
+                    <img src="imagenes/productos/p4.webp" width="120">
+                    <p>Producto 4 (Portátil)</p>
+                    <p>Precio: 899€</p>
+                    <p>Disponible</p>
+                    <p><a href="#">Ver producto</a></p>
+                </td>
+                <td>
+                    <img src="imagenes/productos/p5.webp" width="120">
+                    <p>Producto 5 (Torre)</p>
+                    <p>Precio: 599€</p>
+                    <p>No disponible</p>
+                    <p><a href="#">Ver producto</a></p>
+                </td>
+            </tr>
+        </table>
+
+    </main>
+
+    <footer>
+        <h2>Métodos de pago</h2>
+        <p>
+            <a href="#"><img src="imagenes/bizum.png" alt="Pago 1"></a>
+            <a href="#"><img src="imagenes/mastercard.png" alt="Pago 2"></a>
+            <a href="#"><img src="imagenes/visa.png" alt="Pago 3"></a>
+            <a href="#"><img src="imagenes/paypal.png" alt="Pago 4"></a>
+        </p>
+    </footer>
+
+</body>
+</html>
+
+<!-- Recuerda que los estilos deben estar en estilos.css -->

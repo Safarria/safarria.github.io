@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="elances.css">
+    <title>Material de los profesores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 🔹 Solo 2 columnas */
+            gap: 25px;
+            padding: 30px 50px;
+            justify-items: center;
+        }
+
+        .tarea {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .tarea:hover {
+            transform: scale(1.03);
+        }
+
+        .tarea img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .info h3 {
+            color: #1e90ff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .detalle {
+            color: #555;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .fecha {
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        /* 🔹 Botón "Añadir contenido" */
+        .boton-contenido {
+            display: block;
+            margin: 40px auto;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .boton-contenido:hover {
+            background-color: #800000; /* granate */
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 900px) {
+            .contenedor {
+                grid-template-columns: 1fr; /* En móviles → 1 columna */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>Material de los profesores</header>
+
+    <div class="contenedor">
+        <div class="tarea"><img src="algebra.avif"><div class="info"><h3>Ejercicios de Álgebra</h3><div class="detalle">Subido por: Prof. García</div><div class="detalle">Asignatura: Matemáticas</div><div class="fecha">Entrega: 12/11/2025</div></div></div>
+        <div class="tarea"><img src="tecx.webp"><div class="info"><h3>Análisis de texto narrativo</h3><div class="detalle">Subido por: Prof. Martínez</div><div class="detalle">Asignatura: Lengua y Literatura</div><div class="fecha">Entrega: 10/11/2025</div></div></div>
+        <div class="tarea"><img src="rev.jfif"><div class="info"><h3>Revolución Francesa</h3><div class="detalle">Subido por: Prof. Torres</div><div class="detalle">Asignatura: Historia</div><div class="fecha">Entrega: 15/11/2025</div></div></div>
+        <div class="tarea"><img src="eco.jpg"><div class="info"><h3>Proyecto de Ecosistemas</h3><div class="detalle">Subido por: Prof. Gómez</div><div class="detalle">Asignatura: Biología</div><div class="fecha">Entrega: 18/11/2025</div></div></div>
+        <div class="tarea"><img src="fisica.png"><div class="info"><h3>Movimiento Rectilíneo Uniforme</h3><div class="detalle">Subido por: Prof. López</div><div class="detalle">Asignatura: Física</div><div class="fecha">Entrega: 20/11/2025</div></div></div>
+        <div class="tarea"><img src="tablka.jfif"><div class="info"><h3>Tabla Periódica Avanzada</h3><div class="detalle">Subido por: Prof. Pérez</div><div class="detalle">Asignatura: Química</div><div class="fecha">Entrega: 25/11/2025</div></div></div>
+        <div class="tarea"><img src="ing.png"><div class="info"><h3>Essay: My Dream Job</h3><div class="detalle">Subido por: Prof. Taylor</div><div class="detalle">Asignatura: Inglés</div><div class="fecha">Entrega: 22/11/2025</div></div></div>
+        <div class="tarea"><img src="redes.png"><div class="info"><h3>Redes y Protocolos</h3><div class="detalle">Subido por: Prof. Fernández</div><div class="detalle">Asignatura: Informática</div><div class="fecha">Entrega: 19/11/2025</div></div></div>
+        <div class="tarea"><img src="collage.webp"><div class="info"><h3>Collage Creativo</h3><div class="detalle">Subido por: Prof. Ruiz</div><div class="detalle">Asignatura: Arte</div><div class="fecha">Entrega: 21/11/2025</div></div></div>
+        <div class="tarea"><img src="louis.jpg"><div class="info"><h3>Historia del Jazz</h3><div class="detalle">Subido por: Prof. Díaz</div><div class="detalle">Asignatura: Música</div><div class="fecha">Entrega: 27/11/2025</div></div></div>
+        <div class="tarea"><img src="ef.jpg"><div class="info"><h3>Rutina de estiramientos</h3><div class="detalle">Subido por: Prof. Santos</div><div class="detalle">Asignatura: Educación Física</div><div class="fecha">Entrega: 12/12/2025</div></div></div>
+        <div class="tarea"><img src="economia.avif"><div class="info"><h3>Trabajo de microeconomía</h3><div class="detalle">Subido por: Prof. Navarro</div><div class="detalle">Asignatura: Economía</div><div class="fecha">Entrega: 10/12/2025</div></div></div>
+        <div class="tarea"><img src="platon.jfif"><div class="info"><h3>Ensayo sobre Platón</h3><div class="detalle">Subido por: Prof. Ramos</div><div class="detalle">Asignatura: Filosofía</div><div class="fecha">Entrega: 09/12/2025</div></div></div>
+        <div class="tarea"><img src="europa.webp"><div class="info"><h3>Mapa político de Europa</h3><div class="detalle">Subido por: Prof. Vega</div><div class="detalle">Asignatura: Geografía</div><div class="fecha">Entrega: 08/12/2025</div></div></div>
+        <div class="tarea"><img src="arduino.png"><div class="info"><h3>Proyecto Arduino</h3><div class="detalle">Subido por: Prof. Romero</div><div class="detalle">Asignatura: Tecnología</div><div class="fecha">Entrega: 14/12/2025</div></div></div>
+        <div class="tarea"><img src="java.png"><div class="info"><h3>Ejercicio de JavaScript</h3><div class="detalle">Subido por: Prof. Morales</div><div class="detalle">Asignatura: Programación</div><div class="fecha">Entrega: 16/12/2025</div></div></div>
+        <div class="tarea"><img src="robot.jpg"><div class="info"><h3>Diseño de brazo mecánico</h3><div class="detalle">Subido por: Prof. Nieto</div><div class="detalle">Asignatura: Robótica</div><div class="fecha">Entrega: 20/12/2025</div></div></div>
+        <div class="tarea"><img src="globo.jfif"><div class="info"><h3>Trabajo de globalización</h3><div class="detalle">Subido por: Prof. Gil</div><div class="detalle">Asignatura: Ciencias Sociales</div><div class="fecha">Entrega: 18/12/2025</div></div></div>
+        <div class="tarea"><img src="france.png"><div class="info"><h3>Mon journal de voyage</h3><div class="detalle">Subido por: Prof. Lefèvre</div><div class="detalle">Asignatura: Francés</div><div class="fecha">Entrega: 13/12/2025</div></div></div>
+        <div class="tarea"><img src="mente.jpg"><div class="info"><h3>La memoria humana</h3><div class="detalle">Subido por: Prof. Ortega</div><div class="detalle">Asignatura: Psicología</div><div class="fecha">Entrega: 17/12/2025</div></div></div>
+    </div>
+
+    <!-- 🔹 Botón que lleva a perfil3.html -->
+    <button class="boton-contenido" onclick="window.location.href='perfil3.html'">
+        Añadir contenido
+    </button>
+  <script>
+    // Recuperar las tareas guardadas
+    const tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+    const contenedor = document.getElementById('contenedor');
+
+    tareas.forEach(tarea => {
+      const div = document.createElement('div');
+      div.classList.add('tarea');
+
+      div.innerHTML = `
+        <img src="${tarea.imagen ? tarea.imagen : 'sinimagen.jpg'}" alt="Imagen de la tarea">
+        <div class="info">
+          <h3>${tarea.nombre}</h3>
+          <div class="detalle">Subido por: ${tarea.autor}</div>
+          <div class="detalle">Asignatura: ${tarea.asignatura}</div>
+          <div class="fecha">Entrega: ${new Date(tarea.fecha).toLocaleString()}</div>
+          <div class="detalle"><em>${tarea.resumen || ''}</em></div>
+          ${tarea.adjunto ? `<div class="detalle"><a href="${tarea.adjunto}" target="_blank">📎 Ver material adjunto</a></div>` : ''}
+        </div>
+      `;
+
+      contenedor.appendChild(div);
+    });
+  </script>
+</body>
+</html>

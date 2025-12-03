@@ -1,0 +1,116 @@
+/* Estilos para la cabecera */
+header {
+  background-color: #131921;
+  width: 100%;
+}
+
+/* Estilos para el menú */
+nav {
+  background-color: #232F3E;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+nav a {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline dotted;
+}
+
+/* Estilos para el banner */
+.banner {
+  width: 60%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  /* Añade aquí tu imagen de fondo */
+  background-image: url('imagenes/navidad.jpg');
+}
+
+.banner h1 {
+  text-align: center;
+  color: white;
+}
+
+/* Sección de categorías */
+.categorias {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.categorias li {
+  width: 130px;
+  height: 130px;
+  background-color: #FB4900; /* Naranja */
+  display: inline-block;
+  margin: 10px;
+  border: 5px solid #F0D63B; /* Amarillo */
+  line-height: 130px;
+  text-align: center;
+  border-radius: 50%; /* Redondeado al 50% */
+  transition: background-color 1s, border-color 1s;
+}
+
+.categorias li:hover {
+  background-color: #F0D63B; /* Amarillo al pasar el ratón */
+  border-color: #FB4900; /* Naranja al pasar el ratón */
+}
+
+.categorias a {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.categorias a:hover {
+  text-decoration: underline dotted;
+  color: #208945;
+}
+
+/* Sección de ofertas */
+.ofertas {
+  width: 90%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.ofertas td, .ofertas th {
+  border: 5px solid black;
+  padding: 15px;
+  text-align: center;
+  transition: border-color 0.3s;
+  border-radius: 10px; /* Bordes redondeados de 10px */
+}
+
+.ofertas td:hover {
+  border-color: green;
+}
+
+.ofertas .disponible {
+  color: green;
+  font-weight: bold;
+}
+
+.ofertas .no-disponible {
+  color: red;
+  font-weight: bold;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #E3E3E3;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  border-top: 15px solid black;
+  padding: 20px 0;
+}

@@ -1,0 +1,12 @@
+/* Estilos para el título principal de la página */
+#titulo-principal {
+    /* Establece el tamaño de la fuente a 28 píxeles */
+    font-size: 28px;
+    /* Define el color del texto en azul marino */
+    color: navy;
+    /* Crea una línea decorativa debajo del título
+       - 2px: grosor de la línea
+       - solid: estilo de línea sólida
+       - navy: color azul marino */
+    border-bottom: 2px solid navy;
+}

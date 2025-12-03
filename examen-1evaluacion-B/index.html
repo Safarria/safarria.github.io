@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Escribe aquí el código de la página de ofertas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Empresa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+        }
+        header img {
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        footer img {
+            height: 40px;
+            margin: 0 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <!-- Logo elegido por el usuario -->
+        <img src="imagenes/awazon.png" alt="Logo de la empresa">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido principal -->
+
+        <!-- Banner -->
+        <section id="banner" style="text-align:center; margin: 20px 0;">
+            <a href="ofertas.html">
+                <div class="banner">
+                    <img src="imagenes/ofertasflash.png" alt="Banner de ofertas" style="width: 100%; max-width: 900px; border-radius: 10px;">
+                </div>
+            </a>
+        </section>
+
+        <!-- Categorías destacadas -->
+        <section id="categorias" style="padding: 20px; text-align:center;" class="categorias">
+            <h1>Categorías destacadas</h1>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; font-size: 1.2em;">
+                <li><a href="#">Telefonía</a></li>
+                <li><a href="#">Informática</a></li>
+                <li><a href="#">Electrodomésticos</a></li>
+                <li><a href="#">Televisión</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Métodos de pago</h2>
+        <p>
+            <a href="#"><img src="imagenes/bizum.png" alt="Pago 1"></a>
+            <a href="#"><img src="imagenes/mastercard.png" alt="Pago 2"></a>
+            <a href="#"><img src="imagenes/visa.png" alt="Pago 3"></a>
+            <a href="#"><img src="imagenes/paypal.png" alt="Pago 4"></a>
+        </p>
+    </footer>
+
+</body>
+</html>
+<!-- Recuerda que los estilos deben estar en estilos.css -->
